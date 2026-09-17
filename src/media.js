@@ -59,9 +59,9 @@ export function lottieSource(data, resolution = 1) {
     dispose() { animation.destroy(); } };
 }
 
-async function modelSource(modelId, pose, resolution = 1) {
+async function modelSource(modelId, pose, bones, resolution = 1) {
   if (!modelCache.has(modelId)) modelCache.set(modelId, fetchJSON(`/models/standing/lottie/${modelId}.json`));
-  return lottieSource(poseModel(await modelCache.get(modelId), pose), resolution);
+  return lottieSource(poseModel(await modelCache.get(modelId), pose, bones), resolution);
 }
 
 async function stickerSource(stickerId, resolution = 1) {
@@ -149,7 +149,7 @@ async function assetSource(asset, resolution = 1) {
 }
 
 export async function createSource(layer, assets, resolution = 1) {
-  if (layer.type === 'pepe') return modelSource(layer.modelId, layer.pose, resolution);
+  if (layer.type === 'pepe') return modelSource(layer.modelId, layer.pose, layer.bones, resolution);
   if (layer.type === 'sticker') return stickerSource(layer.stickerId, resolution);
   return assetSource(assets[layer.assetId], resolution);
 }
