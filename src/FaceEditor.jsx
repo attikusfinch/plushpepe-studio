@@ -3,7 +3,7 @@ import { Stage, Layer, Group, Image as KonvaImage, Rect, Transformer } from 'rea
 import { X, Smile, FlipHorizontal2, RotateCcw, Undo2, Download, Check } from 'lucide-react';
 import { assetUrl } from './assetUrl';
 import { getModelData, renderLayer, download } from './media';
-import { faceLayout, facePart, facePartNames, levelEyes, buttonsToLeft } from './face';
+import { faceLayout, facePart, facePartNames, levelEyes, buttonsToLeft, defaultFace, resolveFace } from './face';
 import { neutralPose, clamp } from './core';
 
 const view = { x: 285, y: 167, scale: 2.1, width: 520, height: 445 };
@@ -56,16 +56,17 @@ export default function FaceEditor({ layer, onApply, onClose }) {
   const undo = () => { if (!past.length) return; replace(past[past.length - 1]); setPast(items => items.slice(0, -1)); lastInput.current.key = ''; };
   useEffect(() => {
     let canceled = false;
-    getModelData(layer.modelId).then(source => { if (!canceled) { setLayout(faceLayout(source)); setLoaded(true); } }).catch(error => setError(error.message));
+    getModelData(layer.modelId).then(source => { if (!canceled) { const parts = faceLayout(source); setLayout(parts); replace(resolveFace(parts, layer.face)); setLoaded(true); } }).catch(error => setError(error.message));
     return () => { canceled = true; };
   }, [layer.modelId]);
   useEffect(() => {
+    if (!loaded) return;
     let canceled = false;
     const timer = setTimeout(() => {
       renderLayer({ ...layer, pose: neutralPose, bones: {}, face: draft }, {}, 1.5).then(canvas => { if (!canceled) setImage(canvas); }).catch(error => { if (!canceled) setError(error.message); });
     }, 25);
     return () => { canceled = true; clearTimeout(timer); };
-  }, [draft, layer.modelId]);
+  }, [draft, layer.modelId, loaded]);
   useEffect(() => {
     const keydown = event => {
       if (event.key === 'Escape' && !busy) { event.preventDefault(); onClose(); }
@@ -86,10 +87,10 @@ export default function FaceEditor({ layer, onApply, onClose }) {
   };
   const edit = facePart(draft, active);
   return <div className="face-editor-backdrop"><div className="face-editor" role="dialog" aria-modal="true" aria-labelledby="face-editor-title">
-    <header className="face-editor-header"><span className="face-editor-icon"><Smile size={23} /></span><div><h2 id="face-editor-title">Мастерская лица <span>Pepe {layer.modelId}</span></h2><p>Подвинь детали, поправь наклон и направление пуговиц.</p></div><button className="icon-button" aria-label="Закрыть мастерскую лица" onClick={onClose}><X size={20} /></button></header>
+    <header className="face-editor-header"><span className="face-editor-icon"><Smile size={23} /></span><div><h2 id="face-editor-title">Мастерская лица <span>Pepe {layer.modelId}</span></h2><p>Подвинь детали, поправь наклон и прикрой глаза веками.</p></div><button className="icon-button" aria-label="Закрыть мастерскую лица" onClick={onClose}><X size={20} /></button></header>
     <div className="face-editor-body">
       <aside className="face-reference"><h3>Ориентир · 002</h3><div className="face-reference-crop"><img src={assetUrl('/references/002.png')} alt="Лицо оригинального Plush Pepe 002" /></div><p>Слева и справа — как на картинке. Пуговицы можно двигать отдельно от глаз.</p>
-        <h3>Быстрая правка</h3><button disabled={!layout} className="button full subtle" onClick={() => action(face => levelEyes(face, layout))}>Глаза на одном уровне</button><button disabled={!layout} className="button full subtle" onClick={() => action(face => buttonsToLeft(face, layout))}>Пуговицы левее</button><button disabled={!layout} className="button full subtle" onClick={() => action(face => ({ ...face, mouth: { ...facePart(face, 'mouth'), rotation: 6 } }))}>Улыбка ровнее</button><button className="text-button" onClick={() => action(() => ({}))}><RotateCcw size={13} />Вернуть исходное лицо</button>
+        <h3>Быстрая правка</h3><button disabled={!layout} className="button full subtle" onClick={() => action(face => levelEyes(face, layout))}>Глаза на одном уровне</button><button disabled={!layout} className="button full subtle" onClick={() => action(face => buttonsToLeft(face, layout))}>Пуговицы левее</button><button disabled={!layout} className="button full subtle" onClick={() => action(face => ({ ...face, mouth: { ...facePart(face, 'mouth'), rotation: 6 } }))}>Улыбка ровнее</button><button className="text-button" disabled={!layout} onClick={() => action(() => defaultFace(layout))}><RotateCcw size={13} />Вернуть стандартное лицо</button>
       </aside>
       <div className="face-preview-area"><div className="face-preview-caption"><span>КРУПНЫЙ ПЛАН</span><button className="text-button" disabled={!past.length} onClick={undo}><Undo2 size={14} />Отменить</button></div><div className="face-preview">
         <Stage width={view.width} height={view.height}><Layer><Group x={-view.x * view.scale} y={-view.y * view.scale} scaleX={view.scale} scaleY={view.scale}>
@@ -99,7 +100,7 @@ export default function FaceEditor({ layer, onApply, onClose }) {
         {!image && <div className="face-loading">Подготавливаем лицо…</div>}
       </div><p className="face-preview-hint">Тяни рамку для перемещения, уголки — для размера, верхнюю ручку — для поворота.</p>{error && <p className="face-error" role="alert">{error}</p>}{loaded && !layout && <p className="face-error">У этой модели нет отдельных глаз и улыбки: это силуэт.</p>}</div>
       <aside className="face-properties"><h3>Что поправим?</h3><div className="face-part-list">{Object.entries(facePartNames).map(([key, name]) => <button disabled={!layout} className={active === key ? 'active' : ''} key={key} onClick={() => setActive(key)}>{name}{active === key && <Check size={14} />}</button>)}</div>
-        <fieldset disabled={!layout}><div className="field-grid"><ValueInput label="Сдвиг X" value={edit.x} min={-150} max={150} onChange={x => patch({ x }, true, `${active}-x`)} /><ValueInput label="Сдвиг Y" value={edit.y} min={-150} max={150} onChange={y => patch({ y }, true, `${active}-y`)} /></div><div className="face-angle"><ValueInput label="Наклон" value={edit.rotation} min={-180} max={180} suffix="°" onChange={rotation => patch({ rotation }, true, `${active}-rotation`)} /></div><label className="range-field"><span>Размер<b>{Math.round(edit.scale * 100)}%</b></span><input type="range" aria-label="Размер детали лица" min={20} max={300} value={edit.scale * 100} onChange={event => patch({ scale: Number(event.target.value) / 100 }, true, `${active}-scale`)} /></label><button className={`button full subtle ${edit.flipX ? 'face-mirrored' : ''}`} aria-pressed={edit.flipX} onClick={() => patch({ flipX: !edit.flipX }, true, 'flip')}><FlipHorizontal2 size={16} />Зеркально</button><button className="text-button" onClick={() => action(face => { const next = { ...face }; delete next[active]; return next; })}><RotateCcw size={12} />Сбросить эту деталь</button></fieldset>
+        <fieldset disabled={!layout}>{active.startsWith('eye') && <label className="range-field face-eyelid-control"><span>Верхнее веко<b>{Math.round(edit.eyelid * 100)}%</b></span><input type="range" aria-label="Верхнее веко" min={0} max={60} value={Math.round(edit.eyelid * 100)} onChange={event => patch({ eyelid: Number(event.target.value) / 100 }, true, `${active}-eyelid`)} /><small>0% — открытый глаз · 60% — сонный</small></label>}<div className="field-grid"><ValueInput label="Сдвиг X" value={edit.x} min={-150} max={150} onChange={x => patch({ x }, true, `${active}-x`)} /><ValueInput label="Сдвиг Y" value={edit.y} min={-150} max={150} onChange={y => patch({ y }, true, `${active}-y`)} /></div><div className="face-angle"><ValueInput label="Наклон" value={edit.rotation} min={-180} max={180} suffix="°" onChange={rotation => patch({ rotation }, true, `${active}-rotation`)} /></div><label className="range-field"><span>Размер<b>{Math.round(edit.scale * 100)}%</b></span><input type="range" aria-label="Размер детали лица" min={20} max={300} value={edit.scale * 100} onChange={event => patch({ scale: Number(event.target.value) / 100 }, true, `${active}-scale`)} /></label><button className={`button full subtle ${edit.flipX ? 'face-mirrored' : ''}`} aria-pressed={edit.flipX} onClick={() => patch({ flipX: !edit.flipX }, true, 'flip')}><FlipHorizontal2 size={16} />Зеркально</button><button className="text-button" onClick={() => action(face => { return { ...face, [active]: defaultFace(layout)[active] }; })}><RotateCcw size={12} />Сбросить эту деталь</button></fieldset>
       </aside>
     </div>
     <footer className="face-editor-footer"><label>Применить<select aria-label="Куда применить лицо" value={scope} onChange={event => setScope(event.target.value)}><option value="model">К модели {layer.modelId}: все копии + новые</option><option value="figure">Только к выбранной фигуре</option></select></label><div><button className="button subtle" disabled={busy || !layout} onClick={png}><Download size={16} />PNG модели</button><button className="button subtle" onClick={onClose}>Отмена</button><button className="button primary" disabled={!layout || busy} onClick={() => onApply(draft, scope)}><Check size={16} />Применить правки</button></div></footer>

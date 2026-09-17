@@ -1,9 +1,12 @@
+import { eyelidLayer } from './eyelids.js';
+
 export const facePartNames = {
   eyeLeft: 'Глаз слева', eyeRight: 'Глаз справа',
   buttonLeft: 'Пуговица слева', buttonRight: 'Пуговица справа', mouth: 'Улыбка',
 };
 export const defaultFacePart = { x: 0, y: 0, rotation: 0, scale: 1, flipX: false };
-export const facePart = (face, key) => ({ ...defaultFacePart, ...face?.[key] });
+export const defaultEyelid = .3;
+export const facePart = (face, key) => ({ ...defaultFacePart, ...(['eyeLeft', 'eyeRight'].includes(key) ? { eyelid: defaultEyelid } : {}), ...face?.[key] });
 
 function shapeBounds(layer) {
   const points = [];
@@ -54,12 +57,12 @@ export function faceLayout(source) {
 }
 
 export function applyFace(source, face = {}) {
-  if (!Object.keys(face).length) return;
   const layout = faceLayout(source);
   if (!layout) return;
+  const resolved = resolveFace(layout, face);
   const indices = { eyeLeft: 8100, eyeRight: 8101, mouth: 8102, buttonLeft: 8110, buttonRight: 8111 };
   for (const [key, part] of Object.entries(layout)) {
-    const edit = facePart(face, key);
+    const edit = resolved[key];
     for (const layer of source.layers) if (part.ids.includes(layer.ind)) layer.parent = indices[key];
     source.layers.push({
       ty: 3, ind: indices[key], nm: `Face adjustment / ${key}`, parent: part.parent ? indices[part.parent] : 900,
@@ -69,6 +72,12 @@ export function applyFace(source, face = {}) {
         s: { a: 0, k: [edit.scale * (edit.flipX ? -100 : 100), edit.scale * 100, 100] } },
     });
   }
+  for (const [index, key] of ['eyeLeft', 'eyeRight'].entries()) {
+    const part = layout[key];
+    const eye = source.layers.find(layer => layer.ind === part.ids[0]);
+    const lid = eyelidLayer(eye, part, resolved[key].eyelid, indices[key], 8120 + index);
+    if (lid) source.layers.unshift(lid);
+  }
 }
 
 export function validFace(face) {
@@ -77,6 +86,7 @@ export function validFace(face) {
     if (!facePartNames[key] || !edit || typeof edit !== 'object' || Array.isArray(edit)) return false;
     return Object.entries(edit).every(([property, value]) => {
       if (property === 'flipX') return typeof value === 'boolean';
+      if (property === 'eyelid') return ['eyeLeft', 'eyeRight'].includes(key) && Number.isFinite(value) && value >= 0 && value <= .6;
       if (!['x', 'y', 'rotation', 'scale'].includes(property) || !Number.isFinite(value)) return false;
       return property === 'scale' ? value >= .2 && value <= 3 : Math.abs(value) <= 1000;
     });
@@ -100,4 +110,18 @@ export function buttonsToLeft(face, layout) {
     next[`button${side}`] = { ...facePart(face, `button${side}`), x: eye.pivot[0] - eye.width * .12 - button.pivot[0] };
   }
   return next;
+}
+
+// Stored adjustments override the new baseline without stacking translations.
+// Empty or missing faces get all three quick corrections automatically.
+export function defaultFace(layout) {
+  if (!layout) return {};
+  const face = buttonsToLeft(levelEyes({}, layout), layout);
+  return { ...face, mouth: { ...facePart({}, 'mouth'), rotation: 6 } };
+}
+
+export function resolveFace(layout, face = {}) {
+  if (!layout) return {};
+  const baseline = defaultFace(layout);
+  return Object.fromEntries(Object.keys(facePartNames).map(key => [key, { ...baseline[key], ...face[key] }]));
 }
