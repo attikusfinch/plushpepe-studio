@@ -8,7 +8,7 @@ function Figure({ item, assets, selected, editingBones, onSelect, onChange, onMe
   const [source, setSource] = useState(null); const [image, setImage] = useState(null);
   const [revision, setRevision] = useState(0); const queue = useRef(Promise.resolve());
   const callbacks = useRef({ onMetadata, onError }); callbacks.current = { onMetadata, onError };
-  const poseKey = JSON.stringify([item.pose, item.bones]);
+  const poseKey = JSON.stringify([item.pose, item.bones, item.face]);
   useEffect(() => {
     if (item.type === 'text') return;
     let canceled = false; let resource;

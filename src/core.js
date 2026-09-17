@@ -1,4 +1,5 @@
 import { deformLimb, limbRigs } from './rig.js';
+import { applyFace, validFace, validFacePresets } from './face.js';
 
 export const uid = () => crypto.randomUUID();
 export const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
@@ -20,7 +21,7 @@ export const joints = {
   rightLeg: { limb: 11, grey: 105, pivot: [304, 410] },
 };
 
-export function poseModel(source, pose = neutralPose, bones = {}) {
+export function poseModel(source, pose = neutralPose, bones = {}, face = {}) {
   const data = structuredClone(source);
   data.w = data.h = 768;
   const root = data.layers.find(layer => layer.ind === 900);
@@ -45,6 +46,7 @@ export function poseModel(source, pose = neutralPose, bones = {}) {
       deformLimb(layer, key, bones?.[key]);
     }
   }
+  applyFace(data, face);
   return data;
 }
 
@@ -69,6 +71,7 @@ export function validateProject(raw) {
   if (!raw || raw.version !== 1 || !Array.isArray(raw.layers) || raw.layers.length > 200 || !raw.canvas || !raw.assets || typeof raw.assets !== 'object' || Array.isArray(raw.assets)) fail();
   for (const key of ['width', 'height']) if (!Number.isInteger(raw.canvas[key]) || raw.canvas[key] < 64 || raw.canvas[key] > 4096) fail();
   if (typeof raw.canvas.background !== 'string' || !/^#[\da-f]{6}$/i.test(raw.canvas.background)) fail();
+  if (raw.modelFaces !== undefined && !validFacePresets(raw.modelFaces)) fail();
   const ids = new Set();
   for (const layer of raw.layers) {
     if (!['pepe', 'sticker', 'image', 'text'].includes(layer.type) || typeof layer.id !== 'string' || ids.has(layer.id)) fail();
@@ -76,6 +79,7 @@ export function validateProject(raw) {
     for (const key of ['x', 'y', 'width', 'height', 'rotation', 'opacity']) if (!Number.isFinite(layer[key])) fail();
     if (layer.width < 1 || layer.height < 1 || layer.width > 32768 || layer.height > 32768 || layer.opacity < 0 || layer.opacity > 1) fail();
     if (layer.type === 'pepe' && !/^0(3[4-9]|[4-7]\d|8[0-3])$/.test(layer.modelId)) fail();
+    if (layer.face !== undefined && !validFace(layer.face)) fail();
     if (layer.bones !== undefined) {
       if (!layer.bones || typeof layer.bones !== 'object' || Array.isArray(layer.bones)) fail();
       for (const [key, points] of Object.entries(layer.bones)) {
