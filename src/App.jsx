@@ -13,7 +13,30 @@ const names = { '034': 'Радуга', '035': 'Голубой', '039': 'Клоу
 const modelName = id => names[id] || `Plush Pepe ${id}`;
 
 function IconButton({ icon: Icon, label, ...props }) { return <button className="icon-button" title={label} aria-label={label} {...props}><Icon size={17} /></button>; }
-function Field({ label, value, onChange, min, max, step = 1, suffix }) { return <label className="number-field"><span>{label}</span><input aria-label={label} type="number" value={Number.isFinite(value) ? Math.round(value * 100) / 100 : 0} min={min} max={max} step={step} onChange={event => { if (event.target.value !== '') onChange(clamp(Number(event.target.value), min ?? -100000, max ?? 100000)); }} />{suffix && <small>{suffix}</small>}</label>; }
+function Field({ label, value, onChange, min, max, step = 1, suffix, commitOnBlur = false }) {
+  const formatted = Number.isFinite(value) ? String(Math.round(value * 100) / 100) : '0';
+  const [draft, setDraft] = useState(formatted);
+  useEffect(() => { setDraft(formatted); }, [formatted]);
+  const commit = () => {
+    const number = draft.trim() === '' ? NaN : Number(draft);
+    if (!Number.isFinite(number)) { setDraft(formatted); return; }
+    const next = clamp(number, min ?? -100000, max ?? 100000);
+    setDraft(String(next));
+    if (next !== value) onChange(next);
+  };
+  return <label className="number-field"><span>{label}</span><input aria-label={label} type="number" value={commitOnBlur ? draft : formatted} min={min} max={max} step={step}
+    onFocus={event => { if (commitOnBlur) event.currentTarget.select(); }}
+    onChange={event => {
+      if (commitOnBlur) setDraft(event.target.value);
+      else if (event.target.value !== '' && Number.isFinite(Number(event.target.value))) onChange(clamp(Number(event.target.value), min ?? -100000, max ?? 100000));
+    }}
+    onBlur={commitOnBlur ? commit : undefined}
+    onKeyDown={event => {
+      if (!commitOnBlur) return;
+      if (event.key === 'Enter') { event.preventDefault(); event.currentTarget.blur(); }
+      if (event.key === 'Escape') { event.preventDefault(); event.stopPropagation(); setDraft(formatted); }
+    }} />{suffix && <small>{suffix}</small>}</label>;
+}
 function Section({ title, children, extra }) { return <section className="property-section"><div className="section-heading"><h3>{title}</h3>{extra}</div>{children}</section>; }
 
 function App() {
@@ -175,7 +198,7 @@ function App() {
         <div className="inspector-tabs"><button className={inspector === 'object' ? 'active' : ''} onClick={() => setInspector('object')}><SlidersHorizontal size={15} />Объект</button><button className={inspector === 'canvas' ? 'active' : ''} onClick={() => setInspector('canvas')}><Grid2X2 size={15} />Холст</button></div>
         <div className="properties-scroll">
           {inspector === 'canvas' ? <>
-            <Section title="Размер холста"><div className="field-grid"><Field label="Ширина" value={project.canvas.width} min={64} max={4096} onChange={width => patchCanvas({ width: Math.round(width) })} /><Field label="Высота" value={project.canvas.height} min={64} max={4096} onChange={height => patchCanvas({ height: Math.round(height) })} /></div><div className="size-presets">{[[1080, 1080, 'Квадрат'], [1080, 1920, 'Сторис'], [1920, 1080, 'Пейзаж'], [512, 512, 'Стикер']].map(([width, height, name]) => <button key={name} onClick={() => patchCanvas({ width, height })}>{name}<small>{width} × {height}</small></button>)}</div></Section>
+            <Section title="Размер холста"><div className="field-grid"><Field commitOnBlur label="Ширина" value={project.canvas.width} min={64} max={4096} onChange={width => patchCanvas({ width: Math.round(width) })} /><Field commitOnBlur label="Высота" value={project.canvas.height} min={64} max={4096} onChange={height => patchCanvas({ height: Math.round(height) })} /></div><div className="size-presets">{[[1080, 1080, 'Квадрат'], [1080, 1920, 'Сторис'], [1920, 1080, 'Пейзаж'], [512, 512, 'Стикер']].map(([width, height, name]) => <button key={name} onClick={() => patchCanvas({ width, height })}>{name}<small>{width} × {height}</small></button>)}</div></Section>
             <Section title="Фон"><label className="toggle-row"><span>Прозрачный фон</span><input type="checkbox" checked={project.canvas.transparent} onChange={event => patchCanvas({ transparent: event.target.checked })} /></label><label className="color-field"><input aria-label="Цвет фона" type="color" value={project.canvas.background} onChange={event => patchCanvas({ background: event.target.value, transparent: false })} /><span>{project.canvas.background.toUpperCase()}</span></label><div className="swatches">{['#eeedf5', '#ffffff', '#f7e7ec', '#e5f1db', '#cbd9f2', '#f4e8d0', '#24262d'].map(color => <button key={color} style={{ background: color }} aria-label={`Фон ${color}`} onClick={() => patchCanvas({ background: color, transparent: false })} />)}</div></Section>
             <Section title="Проект"><button className="button full" onClick={saveFile}><Save size={15} />Сохранить .plush.json</button><button className="button full subtle" onClick={() => projectInput.current.click()}><FolderOpen size={15} />Открыть проект</button><button className="button full subtle" onClick={() => setDialog('new')}><FilePlus2 size={15} />Новый пустой холст</button></Section>
           </> : selected ? <>
