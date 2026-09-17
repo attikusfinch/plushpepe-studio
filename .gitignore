@@ -1,0 +1,24 @@
+# Dependencies and builds
+node_modules/
+dist/
+build/
+.next/
+coverage/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Python and operating system files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+*.log
+
+# Local scratch work and exports
+.scratch/
+exports/

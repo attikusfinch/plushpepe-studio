@@ -1,0 +1,915 @@
+{
+  "schemaVersion": 1,
+  "name": "Plush Pepe Studio",
+  "modelCount": 50,
+  "poses": [
+    {
+      "id": "002",
+      "name": "Стоя",
+      "referenceUrl": "/references/002.png",
+      "sourceFile": "assets/sources/tgs/002.tgs"
+    }
+  ],
+  "models": [
+    {
+      "id": "034",
+      "name": "Plush Pepe 034",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/034.png",
+      "vectorUrl": "/models/standing/lottie/034.json",
+      "referenceUrl": "/references/034.png",
+      "sourceFile": "assets/sources/tgs/034.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "981925d3edb1c1972a107823770e807839f4922be1692e268b3055a023454ff1",
+        "vector": "56adebcbce1aaac67aef34b00cc28d4b27a12106a8785d8616671da21033d836",
+        "reference": "359c2b4fdeca6bb5670f964807f2b61aaa78ffd091a2e7b22e2c033106d4aca7",
+        "source": "0d30d1ad00a963f7bc599feb0c28fd2a954abbd354125117f14408ea475ad967"
+      }
+    },
+    {
+      "id": "035",
+      "name": "Plush Pepe 035",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/035.png",
+      "vectorUrl": "/models/standing/lottie/035.json",
+      "referenceUrl": "/references/035.png",
+      "sourceFile": "assets/sources/tgs/035.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "ded2332f4993854b63f5f28f9c40bdad80474c4c8c4fe78ef46a36ed2be36629",
+        "vector": "26cf2c3c172fbf4f6a3ae256344144a9be39bbdbea492bc81af98a887575aeb3",
+        "reference": "626fcd76fc9f06535a183131ec96261ff448d5eb3eb65424594254efb21055a2",
+        "source": "2f8f23b4519167efb2a3f2818f2ac219eb73e2daeeb964af80f8adc278a45d54"
+      }
+    },
+    {
+      "id": "036",
+      "name": "Plush Pepe 036",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/036.png",
+      "vectorUrl": "/models/standing/lottie/036.json",
+      "referenceUrl": "/references/036.png",
+      "sourceFile": "assets/sources/tgs/036.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "6c552d2870c488c30dad0574f8524fe0a54cb6ecafb29d2fa28a34ff4bf5b95a",
+        "vector": "ed7077deb5c4b0dfa3a925449c3712af2865edeeaa7f8c2a4bf4acdbba1996d6",
+        "reference": "8aa7276d235cb1f76e094328488ab8696c4ab10d29cf706418ca9a0d79e8f202",
+        "source": "1483f7c5889d762fd56c13b91d66c1b3f23bd216a91962c6672dcc4077f9c058"
+      }
+    },
+    {
+      "id": "037",
+      "name": "Plush Pepe 037",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/037.png",
+      "vectorUrl": "/models/standing/lottie/037.json",
+      "referenceUrl": "/references/037.png",
+      "sourceFile": "assets/sources/tgs/037.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "7e442906195b5de6e4e59dada4df596e6ac39a304df10550ff0f16badbdf2d9f",
+        "vector": "ea1fc962de2a545b70ebb5681fd39d6b36941d40ca6f497963df9368e5929dca",
+        "reference": "6a19287dbf21bc1d5fc8617df0c9cf13574fb703fe3e73c92126c70f0735fcb3",
+        "source": "0d6d8af8670e074191fe76418d7ea2e10c5391b24998f2184748f869e4ef7084"
+      }
+    },
+    {
+      "id": "038",
+      "name": "Plush Pepe 038",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/038.png",
+      "vectorUrl": "/models/standing/lottie/038.json",
+      "referenceUrl": "/references/038.png",
+      "sourceFile": "assets/sources/tgs/038.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "fe68694424e6312d81e2d4c6071b7986a6d36f32e776afab0ba781d1e5ca3fb4",
+        "vector": "6b8e7749342d4b66ca629179764bf04d06e43daed65fd64b85e54fba50b9b3ca",
+        "reference": "bac693c6d2b8250939fcd182118d64d70477037a86ae5bad6fb806febb74e1b4",
+        "source": "67cd38ee5bbcbb4b0435dc3490d49e295a6317db491d9da1d7645ce067932bfa"
+      }
+    },
+    {
+      "id": "039",
+      "name": "Plush Pepe 039",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/039.png",
+      "vectorUrl": "/models/standing/lottie/039.json",
+      "referenceUrl": "/references/039.png",
+      "sourceFile": "assets/sources/tgs/039.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "e8494b55df32b6654ca70745fdcf78de2b1285ada2cc77a96892449a8e36bf9f",
+        "vector": "0a9620415b36c1dfa012108bca725d18b530efd3e6498b2c5a04171440f89b82",
+        "reference": "169930497458755c12b8486ee5b596958f3c2c293dfafc87471402e2cf4c486a",
+        "source": "9b4340f393d3cb1b0e1a1a0a9e7ca862e87a9dfde6e44c7e45ab496321cff88d"
+      }
+    },
+    {
+      "id": "040",
+      "name": "Plush Pepe 040",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/040.png",
+      "vectorUrl": "/models/standing/lottie/040.json",
+      "referenceUrl": "/references/040.png",
+      "sourceFile": "assets/sources/tgs/040.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "e661ea1a910d2dde045f2b37b7ece79e5a3b52a043c66784ec9c06b84b97bbf9",
+        "vector": "06dd0492ad6863052f0f0af864c62bcee7c27ba81671d5c66964ad17caedc705",
+        "reference": "14ad2690365cb764365683840cabf42409ef1833984306fc75d400166b0d7d6a",
+        "source": "c249513302c09414c8c604f7f3f4299a47facdd35242db632094b850b9e88df4"
+      }
+    },
+    {
+      "id": "041",
+      "name": "Plush Pepe 041",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/041.png",
+      "vectorUrl": "/models/standing/lottie/041.json",
+      "referenceUrl": "/references/041.png",
+      "sourceFile": "assets/sources/tgs/041.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "261c464ea3dc20ebf71d91b0788e0e7f8a9dbb8b15ee718d0b929c8ae626c4c6",
+        "vector": "b3fbfe71a9de023cdb7935933053f86fc8be9e9b643a906619812941899cab70",
+        "reference": "c15b17ac5b94af8b04128b5463e4c27c6aa49259ef7e8f7157a275c21f22f3c7",
+        "source": "33ca65b21ce8887b823f03133438518fdf066db8c0f55ea6d646291638c8174a"
+      }
+    },
+    {
+      "id": "042",
+      "name": "Plush Pepe 042",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/042.png",
+      "vectorUrl": "/models/standing/lottie/042.json",
+      "referenceUrl": "/references/042.png",
+      "sourceFile": "assets/sources/tgs/042.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "4d9901dbce5d5188799e1bce82236c6ba33f3983a7413098fda437c4003147ac",
+        "vector": "6fb4bfabd1085ae7215129e93b7168140c61fdfc42b849480e9acb9e2ba599d1",
+        "reference": "985246da7920f3f69ff4d4ab64fd6c23d594f5b022b4788e071963d1dcef9b0b",
+        "source": "4884863b54dcc3f67f2ccdb9fca269af09cce2e419aa46a99c5f06af4175c66c"
+      }
+    },
+    {
+      "id": "043",
+      "name": "Plush Pepe 043",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/043.png",
+      "vectorUrl": "/models/standing/lottie/043.json",
+      "referenceUrl": "/references/043.png",
+      "sourceFile": "assets/sources/tgs/043.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "35731e805f51d7b9e4d1d9bfe1ae2e92e8544cea0ebd09f2da9e5e0291a547af",
+        "vector": "ab888e09148b669175cddb223c4617f43c4abd138f1f9d96d37160ceb81a7894",
+        "reference": "64648b271996e76aca49060a260daf61760ecb73f649bdbb3b718bd156ead4c2",
+        "source": "98ee443c8abfe45f612384437dde300cf0ce3717c6624e2cff0981b113311f4e"
+      }
+    },
+    {
+      "id": "044",
+      "name": "Plush Pepe 044",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/044.png",
+      "vectorUrl": "/models/standing/lottie/044.json",
+      "referenceUrl": "/references/044.png",
+      "sourceFile": "assets/sources/tgs/044.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "b7961a086f769651c63d18135ba7c451f9839d656edd374d71b4ea150177ad1f",
+        "vector": "49ab2dacef32cc114cc2deb0df587f5cc4a0f38b76f1419f3269e99ef6aa9f28",
+        "reference": "28452523f662ba7ccb5a7d63c5c75a37f25387b95460afded13078d56f1f7ad3",
+        "source": "d7ab26cce7fe09425baa7cb0a04cce243d80891ec9e01b2b566656d350303840"
+      }
+    },
+    {
+      "id": "045",
+      "name": "Plush Pepe 045",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/045.png",
+      "vectorUrl": "/models/standing/lottie/045.json",
+      "referenceUrl": "/references/045.png",
+      "sourceFile": "assets/sources/tgs/045.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "b13dcfcb778c9bfc2fa3e84939e295b139d22a9386ea5f1b6cf3c0bc23a33054",
+        "vector": "91448fc1e76a2507297a7ed83b8347fe1c92623fde2e6e57e579e925685d4c33",
+        "reference": "6851c94e5849ce49949c02d4d755ebcf48a65fbed34c6ed128f2d37a3a4e1140",
+        "source": "256fd8610b2513250a9cc9377b0c9989220908e126afe72c4362eadc4a2042fa"
+      }
+    },
+    {
+      "id": "046",
+      "name": "Plush Pepe 046",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/046.png",
+      "vectorUrl": "/models/standing/lottie/046.json",
+      "referenceUrl": "/references/046.png",
+      "sourceFile": "assets/sources/tgs/046.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "0093afe88792c4c6e42ad91b2eb7f8830a658bef3a29a44356b2e9f1d1c18a15",
+        "vector": "55222e99570195f463b44ec30154ba29eeeb4b05d19fd1287c92e3022a9a9449",
+        "reference": "28745d1ca8398c94da130e0156d85068fdde4c3460a970554c9bc2cfae1a6edc",
+        "source": "d9f77f6a254a7b1b779ee17ce839a85fa936396291e9c07f555cbb4f2c52acd2"
+      }
+    },
+    {
+      "id": "047",
+      "name": "Plush Pepe 047",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/047.png",
+      "vectorUrl": "/models/standing/lottie/047.json",
+      "referenceUrl": "/references/047.png",
+      "sourceFile": "assets/sources/tgs/047.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "f7d1a0a3b59ef22814a667e71bf9aa28721086e25056f4d30740523b63d5d758",
+        "vector": "56a23fbd61e0ecfb5b857c870c647859ace84c90712ebc81b2fb636872e005e1",
+        "reference": "f7e9d8aba1fbc121264ebc997cd22826f2a0cae7d172307edbeb7f3d9d6bdba3",
+        "source": "dfcb05f276c55a018b0f1fb81e0818a35169ed0a299c225f453f003b5f081e38"
+      }
+    },
+    {
+      "id": "048",
+      "name": "Plush Pepe 048",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/048.png",
+      "vectorUrl": "/models/standing/lottie/048.json",
+      "referenceUrl": "/references/048.png",
+      "sourceFile": "assets/sources/tgs/048.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "c159aa6e6c9c4877090b0bbe26fcc767a04b3da53d0aff9a845c6d4805657080",
+        "vector": "22b3367f0a6af802dc9ebb82ab1cf4c16080befb7819f8fc4b4dd570142fe364",
+        "reference": "54662098ee1f71e636c280b197ef2383ada1423ce75dbd556095185074c7184c",
+        "source": "b89c1834674d4909a07fa3842e244d6b405d3fca06b84e5d3c139a860d5ad1e7"
+      }
+    },
+    {
+      "id": "049",
+      "name": "Plush Pepe 049",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/049.png",
+      "vectorUrl": "/models/standing/lottie/049.json",
+      "referenceUrl": "/references/049.png",
+      "sourceFile": "assets/sources/tgs/049.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "0d01dee1ca04deeaab012992e81628087dd987b70b4933d5a8e55dcd303e9d86",
+        "vector": "8a0df7a36f0e4b76eb3c4ad030b10fd956f730b8d12e8cd3dba132e2590e9c22",
+        "reference": "d1d5a9a18acc3a3f5732844dbb379502c7a09d2863102eba580b67d4a3a688a5",
+        "source": "f99112d27cd61523093d1fa82eda4c3f9024aaf51764a223b495358aed499c19"
+      }
+    },
+    {
+      "id": "050",
+      "name": "Plush Pepe 050",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/050.png",
+      "vectorUrl": "/models/standing/lottie/050.json",
+      "referenceUrl": "/references/050.png",
+      "sourceFile": "assets/sources/tgs/050.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "b2e8993eba3f6efbbd7dcfd7b60871d4db071f2e24a91148fe757e1fe56a8dac",
+        "vector": "aef63701ba06ed609cc01763722610ede1613e1f99663a7f4cd9d5038efae4b7",
+        "reference": "dc71df6ff04f2e35a86fd4ed1e605143b77bf92ac0685fb18f6cb8a48d2e64ec",
+        "source": "8222080e29d849bfb48b1473a9af5d76d61593075da52c6f23367d5494f6666d"
+      }
+    },
+    {
+      "id": "051",
+      "name": "Plush Pepe 051",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/051.png",
+      "vectorUrl": "/models/standing/lottie/051.json",
+      "referenceUrl": "/references/051.png",
+      "sourceFile": "assets/sources/tgs/051.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "8b9a1f5b83032ac0230d52886515ee8f42105aab71f404439632876321972ae9",
+        "vector": "5b0c7314c370a0f0f9ecbb999998fc1aece2f806d5202ac377ccd07436b346a0",
+        "reference": "b68cd086d37620dcbb319e56aaf0c2691cb11d863b327748c02f48622a57125f",
+        "source": "548e0baad362204d637bd3de294c633c9b01f9913b03d3a96d086cc8e222a902"
+      }
+    },
+    {
+      "id": "052",
+      "name": "Plush Pepe 052",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/052.png",
+      "vectorUrl": "/models/standing/lottie/052.json",
+      "referenceUrl": "/references/052.png",
+      "sourceFile": "assets/sources/tgs/052.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "f9058ab5e93501c8804d757fb18f1dac2b7e7f5950c0e41fe67d12b5d9b91d11",
+        "vector": "548f18eb536ec58e64d328ea55c3e0fbe76afd653922653788017d6320b05237",
+        "reference": "0bb328d2faf7c9bebf72a1ad24cf753fadbfede289d4d4f19b5c79de99579984",
+        "source": "854cde301821bd850cd60ef4c0f48e6ff35f93edc5947ac97b55739527a39fca"
+      }
+    },
+    {
+      "id": "053",
+      "name": "Plush Pepe 053",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/053.png",
+      "vectorUrl": "/models/standing/lottie/053.json",
+      "referenceUrl": "/references/053.png",
+      "sourceFile": "assets/sources/tgs/053.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "d85a0c8fe8869ced4a57498b091071f796d19d825b1486917b802b6f76ac96cc",
+        "vector": "0a66f959087365531d2937c29a058e4ba4f88d2d512ce68818d727c4abb8c6c5",
+        "reference": "f6e08cd0e224cf730f9a53314a44755a9dd676cab59676731e971a3f08f9330c",
+        "source": "57ff0bb2945253e9b97028b6e7380d9310f844d82a377b4b01cc34514c5dce68"
+      }
+    },
+    {
+      "id": "054",
+      "name": "Plush Pepe 054",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/054.png",
+      "vectorUrl": "/models/standing/lottie/054.json",
+      "referenceUrl": "/references/054.png",
+      "sourceFile": "assets/sources/tgs/054.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "1ae043cc26fffe2fa349f27782198894bbfbdce55a079c08b0d0857c3d419876",
+        "vector": "98b493eea1e679660959f6f6c531f476051c0b8ee3ba2318c62865bbc501bc33",
+        "reference": "4e0fa104aa62957437f13785bf23342c4a7cc9449d8a8926a6f233c7d8bcd54d",
+        "source": "52b109178e0da6041d55d1cf02b4ac10e368e6a2ac33bcde01532ce895f22e41"
+      }
+    },
+    {
+      "id": "055",
+      "name": "Plush Pepe 055",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/055.png",
+      "vectorUrl": "/models/standing/lottie/055.json",
+      "referenceUrl": "/references/055.png",
+      "sourceFile": "assets/sources/tgs/055.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "5e071f42a5999226eac30e8899153308b741f08503232a66fc56a4e88453b049",
+        "vector": "c02a23a19516b4b48f3110835bd2a3e644958941d2c94e37e521c5db1312e9bf",
+        "reference": "aad7e9a9d5afad1ee759ecfa10b4c78d91dc29fc84bcc6323a08fb233ea6a9fa",
+        "source": "c25e5951ea8bc5c997f19db2a176d3b4a05432b03f4ab7678b4432d0beec2fcb"
+      }
+    },
+    {
+      "id": "056",
+      "name": "Plush Pepe 056",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/056.png",
+      "vectorUrl": "/models/standing/lottie/056.json",
+      "referenceUrl": "/references/056.png",
+      "sourceFile": "assets/sources/tgs/056.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "351ce6d3ae45a5ff0bbc278300bcee41815fb74f5c681c8a01f4e53b913cf13a",
+        "vector": "e58a223700663749e082b1d69f9499d770c078601a9e5b590d20716a778fb36f",
+        "reference": "e4add188825bf685259bcc2d7cb0ae9f9b9fe4e483ba3e5852ef02e64b68d29d",
+        "source": "320629bfd9b5c3713ecd39b64e5b846198105dc9ded29867564d681da38eaf33"
+      }
+    },
+    {
+      "id": "057",
+      "name": "Plush Pepe 057",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/057.png",
+      "vectorUrl": "/models/standing/lottie/057.json",
+      "referenceUrl": "/references/057.png",
+      "sourceFile": "assets/sources/tgs/057.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "c88c1a53fc87dc04ea4a7528e2cbf115758795440a9d8a02e6d6fdabe7cef17e",
+        "vector": "3c6c91110d3d0a07016cb49dedb195b5e60610081dafbfd1e1e0c56098c4621b",
+        "reference": "a89afdbc2685ea4375d909b39c5b0c9938a1298ad5f21666206093d2c9c9fc69",
+        "source": "34ee39c377ae52161aa2fced87ee2ebbf09a04dc335b7e3cff3959472b2b7e8f"
+      }
+    },
+    {
+      "id": "058",
+      "name": "Plush Pepe 058",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/058.png",
+      "vectorUrl": "/models/standing/lottie/058.json",
+      "referenceUrl": "/references/058.png",
+      "sourceFile": "assets/sources/tgs/058.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "c08db2cb486a9b990c28077cb48ac8679a904caf8e06b8b3d0c1d85fdec059de",
+        "vector": "2d0c1a7e57e3df65ef351f8fab8bdf5d1e1366d23708c80737b882e9b7db6ec3",
+        "reference": "a09d806e3da10590fd90dd00730b5ca24652b4e0b9d039429525a710e807be65",
+        "source": "4793aa2b39c674b1aeae89ce7ade22b4d75b20cdf73404c6ce66f16c4a5f2d8e"
+      }
+    },
+    {
+      "id": "059",
+      "name": "Plush Pepe 059",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/059.png",
+      "vectorUrl": "/models/standing/lottie/059.json",
+      "referenceUrl": "/references/059.png",
+      "sourceFile": "assets/sources/tgs/059.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "695edc78e909f6c54bc041985e6118c9e74a59df6d6980f1674607304f673333",
+        "vector": "33310fa98a0d86b1890d8008b2d95803710205b64d73480cd9b823fc6406528a",
+        "reference": "289db4a4383996404a4942070bd0cb00cc46773e58c670905e3c32a55490ed43",
+        "source": "1fb1865dbe75771b7f53c6bc3815814e572aed1b7dcb5589394c9e1b7ccb64a2"
+      }
+    },
+    {
+      "id": "060",
+      "name": "Plush Pepe 060",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/060.png",
+      "vectorUrl": "/models/standing/lottie/060.json",
+      "referenceUrl": "/references/060.png",
+      "sourceFile": "assets/sources/tgs/060.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "1a7f5b4ddb9734671fc6e2ab385c25d91a64c6646caa4b391960596f9e72a7e4",
+        "vector": "0d2a38b117a748f2e200ba9be380a43e321541d1075bee793e58236d690ff3b6",
+        "reference": "3faf829e2c82479352bf8968d3ea3a6e6f0c85fc4c7e79cb701e7a55712185ec",
+        "source": "925c1d4adb0c97d8cdca4705e12fb6173d8a85c40d4815d12379331215d46dcb"
+      }
+    },
+    {
+      "id": "061",
+      "name": "Plush Pepe 061",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/061.png",
+      "vectorUrl": "/models/standing/lottie/061.json",
+      "referenceUrl": "/references/061.png",
+      "sourceFile": "assets/sources/tgs/061.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "Серый силуэт, как в оригинале.",
+      "sha256": {
+        "png": "f8c0ffb53c7735d21800e193e4fff235e2a5166e9bd848c24825dbe5db71f89d",
+        "vector": "9f22fbdc921927c0ddcf74e9777414f6e3001e2ae6ec5bc244133d92fa03e38d",
+        "reference": "694a3833d19f1f627c2594efb2280aaa93a74238db371864af5950e936e0c752",
+        "source": "fd1a081ef68cff4545f67e0ee8b19955e138c52254c73dd1995c05082b13881a"
+      }
+    },
+    {
+      "id": "062",
+      "name": "Plush Pepe 062",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/062.png",
+      "vectorUrl": "/models/standing/lottie/062.json",
+      "referenceUrl": "/references/062.png",
+      "sourceFile": "assets/sources/tgs/062.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "b65f1d2d8fe7c88ed21598ff39cd0dcaed9f6010848144f9b25a6410a1695b73",
+        "vector": "21ea6a86b401261c7864e787601fa5fbd57f54cd8afe38eaa8712f9487edaf9f",
+        "reference": "470a4b6bc22e61d9fc10991d2e2ea22417029533942bf55618d3f771767ad53c",
+        "source": "57da4778a92889cfd154f6ad96a8664bb1e1838385e08928d43fe484ed359f3b"
+      }
+    },
+    {
+      "id": "063",
+      "name": "Plush Pepe 063",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/063.png",
+      "vectorUrl": "/models/standing/lottie/063.json",
+      "referenceUrl": "/references/063.png",
+      "sourceFile": "assets/sources/tgs/063.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "151329db83c3f4dc4e72ac5fb7fd45c2f5cfa32bdb3d7574b2b13ea5fd16ac03",
+        "vector": "cb2e741e7296839edd2b04424f3c17c891b20fbfa23ccb5eae9baa7246aa0094",
+        "reference": "015552b588a35221cb7f38179d190ac4c50e08233960345f6cb8503a8e1c9d5a",
+        "source": "83285e24cd58819e0f231841bf7034d8f1cb775a2687e62a07043faddba5f331"
+      }
+    },
+    {
+      "id": "064",
+      "name": "Plush Pepe 064",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/064.png",
+      "vectorUrl": "/models/standing/lottie/064.json",
+      "referenceUrl": "/references/064.png",
+      "sourceFile": "assets/sources/tgs/064.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "105231ed6c24ab81bc6722d777c77fd531ec4351d9c090b09d46271f35a0b7bf",
+        "vector": "22890271643bfb1176a54e722be5aa1bcc2fe58c4d5b9453440c821cb8a0bd73",
+        "reference": "ef244e03ba7b3f6f1cbe04fa3bf36d19840d3e555247892a015e9be80de2bc7a",
+        "source": "549473f9e1a7aafea60a4b63c4321b2754b3d63e36c8db16746558c8638e092e"
+      }
+    },
+    {
+      "id": "065",
+      "name": "Plush Pepe 065",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/065.png",
+      "vectorUrl": "/models/standing/lottie/065.json",
+      "referenceUrl": "/references/065.png",
+      "sourceFile": "assets/sources/tgs/065.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "537de7f617736baecc00e71359a429478f7e7b08274ed516946955eeee9c69ac",
+        "vector": "14c7ed64f2c3c83003118e8c2f90b8c922ae92d217fe925c986de632210d5d1c",
+        "reference": "0b30ae292b7f1b9c6df774ef9c574e5d66be5a17609f0973f904375431dfe923",
+        "source": "29de61d11af2fb525bef73ad06ff0879c84c30adad1a67f0913bdb0c6cc6c925"
+      }
+    },
+    {
+      "id": "066",
+      "name": "Plush Pepe 066",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/066.png",
+      "vectorUrl": "/models/standing/lottie/066.json",
+      "referenceUrl": "/references/066.png",
+      "sourceFile": "assets/sources/tgs/066.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "6472db8b510ae19513090e3ae91bb4531a5153ba2bed241222e51d8a5f2ff413",
+        "vector": "35e7bbb6b99c763a12490657ae0310f3a87b06e1ce57fd5bb96ff596747f98f9",
+        "reference": "48fa13952484c94937af89b7c7e8c75995a06e28a92a61023d06539d14910fc5",
+        "source": "f82fee35b4f417f894cb3331e31007b8d14b107cffa72e9353a2d6fd2a68f043"
+      }
+    },
+    {
+      "id": "067",
+      "name": "Plush Pepe 067",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/067.png",
+      "vectorUrl": "/models/standing/lottie/067.json",
+      "referenceUrl": "/references/067.png",
+      "sourceFile": "assets/sources/tgs/067.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "0782bb5986378018375ab48834dfe593c126438ec4dd63402b7cc5630a5b7fce",
+        "vector": "977e6649023edb2cfc662f0adad8571dcdad538255ce4740a9dd1d9d65da182d",
+        "reference": "f4fca92203549c9234b2eead4bb108f1d8876b4e69d222c1b4c422d408007af3",
+        "source": "361a43a800b3a2e07184569a73c53276a78cf05c7b1912f372127a1d4f821e9e"
+      }
+    },
+    {
+      "id": "068",
+      "name": "Plush Pepe 068",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/068.png",
+      "vectorUrl": "/models/standing/lottie/068.json",
+      "referenceUrl": "/references/068.png",
+      "sourceFile": "assets/sources/tgs/068.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "aaac325361bc8af5040d147e4a683a5cd92a571e30de01b4d0eb08af6391f539",
+        "vector": "b354a410e45a4e8ea2d3e7acd38c4545e11ff05495ff4427826c80cda945fc32",
+        "reference": "359893c9e70ebd808136151114930772b1f8128b224b54531a36d5ddfe999335",
+        "source": "6ed74e8a9a75f91281c8fe0f606cfbe5586f71a27046c9e85357e3badd6ec6de"
+      }
+    },
+    {
+      "id": "069",
+      "name": "Plush Pepe 069",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/069.png",
+      "vectorUrl": "/models/standing/lottie/069.json",
+      "referenceUrl": "/references/069.png",
+      "sourceFile": "assets/sources/tgs/069.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "948d5bde48f5b22155c41b67ccf940b379a99e590ee86aea0ae1b466379415d5",
+        "vector": "cfbb6c4edf9c0b904e482821369eb7cc9783dbf087c0760c64d921b7918819b9",
+        "reference": "49bf07e67f6d21f3e32d99b4bf7f5a431ccd78bfffa23b150b09682437ff3430",
+        "source": "9afad474749efa926bb204a67e194be289fb7b2d65a3fe86f2e861fbadd67c46"
+      }
+    },
+    {
+      "id": "070",
+      "name": "Plush Pepe 070",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/070.png",
+      "vectorUrl": "/models/standing/lottie/070.json",
+      "referenceUrl": "/references/070.png",
+      "sourceFile": "assets/sources/tgs/070.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "25adbda567b54ad5ff5e86f320ce2c20337690d9037ef31404ca6e2c3f2c8aae",
+        "vector": "88802aad8a29c2804af767f6b3406c64598858a4fae9821d474e08190801dd67",
+        "reference": "f2ffa1fc0229530244a71b0e8ebaecb7500838e5e410e0bc3e41988c4ec33469",
+        "source": "68aa9d17230047f68f9622c316424f67f1186f60955c6efb393f91742b413f12"
+      }
+    },
+    {
+      "id": "071",
+      "name": "Plush Pepe 071",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/071.png",
+      "vectorUrl": "/models/standing/lottie/071.json",
+      "referenceUrl": "/references/071.png",
+      "sourceFile": "assets/sources/tgs/071.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "4fbc90f57451dfab8f910e8370417aa047ab79e73f736e545716aea893058374",
+        "vector": "6a334c9a262adaf42e08671a51e725412d2fa31e3cb40f5cfd7f12ad89a21773",
+        "reference": "8a0fa6a70712a3edf73bc7be9c9dbf07af302a94c32b3fd3c1599e56ccf1bc58",
+        "source": "c5a5ee9eeb1c6a228f82ee69e02616f8ea1e48288ad0002dbb704394804fb1c7"
+      }
+    },
+    {
+      "id": "072",
+      "name": "Plush Pepe 072",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/072.png",
+      "vectorUrl": "/models/standing/lottie/072.json",
+      "referenceUrl": "/references/072.png",
+      "sourceFile": "assets/sources/tgs/072.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "7d05a1415587ae012db38af47b240e24b6d66257f665d4bc16fe2fb83a831cba",
+        "vector": "91eaa6eb1d4755f0db14ac7908731b2f9701d4c2ab7a27c6c220300fb3ca90b3",
+        "reference": "3b387b1f31ec33ae022513c72b2a7ed4080362165527d0d78cd4e8dc63a866c7",
+        "source": "751387ef1f56151a66556ebaaec2aae42f9b6313c0c9feab3ac6f4c384e82004"
+      }
+    },
+    {
+      "id": "073",
+      "name": "Plush Pepe 073",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/073.png",
+      "vectorUrl": "/models/standing/lottie/073.json",
+      "referenceUrl": "/references/073.png",
+      "sourceFile": "assets/sources/tgs/073.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "80a3dd5787a61bd4d9192686c37bc8ab067345a59623c5264762d9aa2c1ceab9",
+        "vector": "3c65339cf28dc14a5948d5b6fdfea85c100034a50ec306e534322b802b16ad1d",
+        "reference": "ad46f3cd307bbcfca23b2e27c6d2ed4062cb38f15ad0e3fd8b8a44c3fc1234d7",
+        "source": "412cba5d225d7604a4e432baed3fb7b8520e5f4074c4e5d102b812d36561479e"
+      }
+    },
+    {
+      "id": "074",
+      "name": "Plush Pepe 074",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/074.png",
+      "vectorUrl": "/models/standing/lottie/074.json",
+      "referenceUrl": "/references/074.png",
+      "sourceFile": "assets/sources/tgs/074.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "e6df63ecf82f75e9ea5e0881cf251fba234e730ecd7519616c64594c9282bff7",
+        "vector": "9d93b068d33cffed90874688c2e37e9e312df2ca0fc18f855c39263edac9d394",
+        "reference": "96fd4c20f6ba7ede7193c9651915c4e450af7f677f4a3ee38cc7da816d28a1f3",
+        "source": "ab6f2708dc02be9a6e9bd26357aef60bbb2c338757d5b358a213811d75cb6205"
+      }
+    },
+    {
+      "id": "075",
+      "name": "Plush Pepe 075",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/075.png",
+      "vectorUrl": "/models/standing/lottie/075.json",
+      "referenceUrl": "/references/075.png",
+      "sourceFile": "assets/sources/tgs/075.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "3cb861f8e0f9248baa079b3d33e18c9aa35b6ce0964d0a6b5e53bd3ecccada3d",
+        "vector": "0491f98bdc48880e10b164f5da1facad81e841f9fadd02d2d19a6c3d12652ad2",
+        "reference": "4065f8c1f4a1c03f11cd9cb744eb115afd09c5740e57b6a10a33c6ae7081e5b4",
+        "source": "e9434a104e4ca72206cdbed6fa55ad7b60ad9057490c16cda1f7ce31da851604"
+      }
+    },
+    {
+      "id": "076",
+      "name": "Plush Pepe 076",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/076.png",
+      "vectorUrl": "/models/standing/lottie/076.json",
+      "referenceUrl": "/references/076.png",
+      "sourceFile": "assets/sources/tgs/076.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "a2efd2835617606688692a8e74dc2aebd3abd38a8d9d9819e96184715c5d1d89",
+        "vector": "0e2ce0a7bbb9cf63c17f3c506b370bab0a5ccf9b78a44f8f698631f96a2c3e3b",
+        "reference": "3d62a54716e62a8593f05f17edf3f5aa23dd5735bbfb54fcf7423e28ddb390ad",
+        "source": "f3d2ffaaa9631c8ead40e344a93c0b335029e9bc32040602e04d2ef26f8f609f"
+      }
+    },
+    {
+      "id": "077",
+      "name": "Plush Pepe 077",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/077.png",
+      "vectorUrl": "/models/standing/lottie/077.json",
+      "referenceUrl": "/references/077.png",
+      "sourceFile": "assets/sources/tgs/077.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "c1e1775a3e50d0744fee5ea594dadbd8c5defde183045bb19a8c8bc926d6af84",
+        "vector": "efeaf8162341efc8b664d4f3cb80f8d83f5ff198be47013dd7e914d8baa21e2f",
+        "reference": "485982f43a52cc13040774af7081c8a091a05c861371331e57e6fc9316603cf5",
+        "source": "f6fe1b551d66c502d6c3f6f51b679e0ad7febd32bc51e329277353c8bf07f4bb"
+      }
+    },
+    {
+      "id": "078",
+      "name": "Plush Pepe 078",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/078.png",
+      "vectorUrl": "/models/standing/lottie/078.json",
+      "referenceUrl": "/references/078.png",
+      "sourceFile": "assets/sources/tgs/078.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "f89eff503fb56eaa89a6f346e72800391c3d97b5983020216ff1c93b0045b8d1",
+        "vector": "4f961d7b6a0a7226e493192a5915b01b34994b1dcc73b5b9e3fa0dc66726e908",
+        "reference": "6e671e124be9987934bc9a87e3d64e04f319d5d9ddfcf8344caeaca482a41f93",
+        "source": "c7b2c62c5d284acd9a2d179ce07b687bec53d5610e9acdd0b420e278edbcbe57"
+      }
+    },
+    {
+      "id": "079",
+      "name": "Plush Pepe 079",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/079.png",
+      "vectorUrl": "/models/standing/lottie/079.json",
+      "referenceUrl": "/references/079.png",
+      "sourceFile": "assets/sources/tgs/079.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "36d6063fe35fe15047c058cdce9bbc52297598a532da37c923f2bcc9897770c0",
+        "vector": "f7a8de0501dac39cb2ad03ce315256f5078a5b314fdece02eba927508a51e27e",
+        "reference": "409b137a092a1dac38a5c13855fd85cb019c0167a5e6550f489c3d88fc61dcbe",
+        "source": "359c3ef18f963a596e4df0a814130d2a8eb08af8502d634f4e93412a59a07a8f"
+      }
+    },
+    {
+      "id": "080",
+      "name": "Plush Pepe 080",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/080.png",
+      "vectorUrl": "/models/standing/lottie/080.json",
+      "referenceUrl": "/references/080.png",
+      "sourceFile": "assets/sources/tgs/080.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "ccfb6c9e9a051c7e71ad8dec5c61c5cf40d9d5e993fd265d57ddbb2b9b8058bc",
+        "vector": "5405c5df588a112b799a2f11ba6c6cb2314d3a30cb8ab6344a59c9ce76ce2b5a",
+        "reference": "e6aa1774644451fa8cbcc188027d162c303379f5cc5bab55042b08eae022afb4",
+        "source": "469e1f5e54ab6a6ab083228ff633e04ad541c2087440f2a0772c60f5decc331c"
+      }
+    },
+    {
+      "id": "081",
+      "name": "Plush Pepe 081",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/081.png",
+      "vectorUrl": "/models/standing/lottie/081.json",
+      "referenceUrl": "/references/081.png",
+      "sourceFile": "assets/sources/tgs/081.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "91f5a13e37e9d20049f0b78d03170989dcef7e7ce3a8a35f20071348707f4a45",
+        "vector": "779db3f82ca108a3725e8db93a118b87e8e629ecbe934aefd2d84e997e743fc3",
+        "reference": "735e8ca9b0dd8af354a515d5d8cddac57ac65feb02822a16c185cdda0d5969eb",
+        "source": "947da6daade9ac57a479043048cf8b4a313747c98bd9658eac7b46a233d5c801"
+      }
+    },
+    {
+      "id": "082",
+      "name": "Plush Pepe 082",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/082.png",
+      "vectorUrl": "/models/standing/lottie/082.json",
+      "referenceUrl": "/references/082.png",
+      "sourceFile": "assets/sources/tgs/082.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "b0cb9c73eb4704e3cd19af526659de28cc076f4de2615cdf643a594a0b66354a",
+        "vector": "42315a0257e766c1701969aef8069d7c18c5acfb7a02716d7934be96bcaa8081",
+        "reference": "8445efee470e34092303ebc6c3043c886d3731fe679520440c5a2dacd4940363",
+        "source": "707098ab31d70499edda98af5fc44eb472dd43064d0c1eb913a37533bd68ff19"
+      }
+    },
+    {
+      "id": "083",
+      "name": "Plush Pepe 083",
+      "poseId": "002",
+      "previewUrl": "/models/standing/png/083.png",
+      "vectorUrl": "/models/standing/lottie/083.json",
+      "referenceUrl": "/references/083.png",
+      "sourceFile": "assets/sources/tgs/083.tgs",
+      "width": 512,
+      "height": 512,
+      "notes": "",
+      "sha256": {
+        "png": "58105d2898362d83755bd522dd2ac6c9a65527542e73d8676404ef85de3aeaf4",
+        "vector": "b588135ee4e55ff2657e423bf68671df8d4bbd0ce4dec29b04ee0c401eb1e3fa",
+        "reference": "a7d6eda0880cceed241bd7aa730fd9c317dcaa5e9e4387bf4d49ec5c17e63970",
+        "source": "47f4b455a41885313349df1051bd979cec0d6bf17c17fd2f868ce6431ba94141"
+      }
+    }
+  ]
+}
