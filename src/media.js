@@ -3,6 +3,7 @@ import { ungzip } from 'pako';
 import { parseGIF, decompressFrames } from 'gifuct-js';
 import { poseModel } from './core';
 import Konva from 'konva';
+import { assetUrl } from './assetUrl';
 
 const modelCache = new Map();
 const stickerCache = new Map();
@@ -60,12 +61,12 @@ export function lottieSource(data, resolution = 1) {
 }
 
 async function modelSource(modelId, pose, bones, resolution = 1) {
-  if (!modelCache.has(modelId)) modelCache.set(modelId, fetchJSON(`/models/standing/lottie/${modelId}.json`));
+  if (!modelCache.has(modelId)) modelCache.set(modelId, fetchJSON(assetUrl(`/models/standing/lottie/${modelId}.json`)));
   return lottieSource(poseModel(await modelCache.get(modelId), pose, bones), resolution);
 }
 
 async function stickerSource(stickerId, resolution = 1) {
-  if (!stickerCache.has(stickerId)) stickerCache.set(stickerId, fetch(`/stickers/${stickerId}.tgs`).then(async response => {
+  if (!stickerCache.has(stickerId)) stickerCache.set(stickerId, fetch(assetUrl(`/stickers/${stickerId}.tgs`)).then(async response => {
     if (!response.ok) throw new Error('Стикер не загрузился.');
     return JSON.parse(ungzip(new Uint8Array(await response.arrayBuffer()), { to: 'string' }));
   }));
