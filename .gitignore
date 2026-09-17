@@ -22,3 +22,8 @@ Thumbs.db
 # Local scratch work and exports
 .scratch/
 exports/
+
+# Generated sticker copies and browser test output
+public/stickers/
+test-results/
+playwright-report/
